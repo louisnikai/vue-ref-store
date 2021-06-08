@@ -1,0 +1,63 @@
+{
+  "name": "vue-ref-store",
+  "version": "1.0.0",
+  "title": "Vue Ref Store",
+  "description": "The store of vue-ref for vue, it needs to be used with vue-ref pachage.",
+  "author": "Louis Ni <louisnikai@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue-ref",
+    "store"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louisnikai/vue-ref-store.git"
+  },
+  "homepage": "https://github.com/louisnikai/vue-ref-store",
+  "bugs": {
+    "url": "https://github.com/louisnikai/vue-ref-store/issues"
+  },
+  "private": false,
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "start": "npm run dev",
+    "compile": "babel -d lib/ src/",
+    "prepare": "npm run build && npm run compile",
+    "unit": "jest --config test/unit/jest.conf.js --coverage",
+    "test": "npm run unit"
+  },
+  "peerDependencies": {
+    "vue": "^2.0.0",
+    "vue-js-extender": "^1.0.2",
+    "vue-objectex": "^1.0.0",
+    "vue-ref": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "jest": "^21.2.1",
+    "jest-serializer-vue": "^2.0.2",
+    "vue-jest": "^2.6.0",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
