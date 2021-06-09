@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     test() {
-      let refVueObj = this.$vueRefStore("[refName]");
+      let refVueObj = this.$vueRefStore.getChildrenRef("[refName]");
       if (!!refVueObj) {
         ...
       }
