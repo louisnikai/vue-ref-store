@@ -27,9 +27,48 @@ npm install --save vue-ref-store
 
 # Usage
 
+You can add the package into your app, or import and create instance of VueRefStore.
+
+<br />
+
 ### Examples
 
-1. Use example:
+1. Add the package into your app:
+```javascript
+import Vue from 'vue'
+
+import VueRefStore from 'vue-ref-store'
+Vue.use(VueRefStore)
+or
+Vue.use(VueLsLoader, {name: [directiveName]})
+```
+PS: This way will auto use vue-ref and add $vueRefStore property for Vue instance.
+<br />
+Then you can use it in vue component:
+```javascript
+<template>
+  <div>
+    <[element] key="[refName]" v-ref="(com, key) => $vueRefStore.setChildrenRef(key, com)"></[element]>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    test() {
+      let refVueObj = this.$vueRefStore.getChildrenRef("[refName]");
+      if (!!refVueObj) {
+        ...
+      }
+    }
+  }
+};
+</script>
+```
+
+<br />
+
+2. Import and create instance of VueRefStore:
 ```javascript
 <template>
   <div>
@@ -41,7 +80,7 @@ npm install --save vue-ref-store
 import { VueRefStore } from 'vue-ref-store';
 
 export default {
-  created() {
+  beforeCreate() {
     this.$vueRefStore = new VueRefStore(this);
   },
   methods: {
@@ -55,6 +94,14 @@ export default {
 };
 </script>
 ```
+
+<br />
+<br />
+<br />
+
+# Change Log
+
+<a href="https://github.com/louisnikai/vue-ref-store/blob/master/CHANGELOG.md">CHANGELOG.md</a>
 
 <br />
 <br />

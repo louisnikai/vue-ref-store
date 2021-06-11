@@ -1,6 +1,6 @@
 {
   "name": "vue-ref-store",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "title": "Vue Ref Store",
   "description": "The store of vue-ref for vue, it needs to be used with vue-ref pachage.",
   "author": "Louis Ni <louisnikai@gmail.com>",
