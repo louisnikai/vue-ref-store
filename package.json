@@ -31,7 +31,7 @@
   },
   "peerDependencies": {
     "vue": "^2.0.0",
-    "vue-js-extender": "^1.0.2",
+    "vue-js-extender": "^1.0.3",
     "vue-objectex": "^1.0.0",
     "vue-ref": "^2.0.0"
   },
